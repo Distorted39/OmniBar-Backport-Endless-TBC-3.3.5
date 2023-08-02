@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: OmniBar Options
+## Notes: Options Panel for OmniBar (LoadOnDemand)
+## Version: 3.3.5a
+## Author: Jordon, Backported to 3.3.5a by Jammin, Modified by Distorted
+## Dependencies: OmniBar
+## LoadOnDemand: 1
+
+localization.lua
+OmniBar_Options.xml
