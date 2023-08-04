@@ -5,13 +5,14 @@
 -- There might be some wrong cooldowns/timers, you're welcome to change it yourself, under the table "cooldowns" around line 56. Should be self-explanatory. Eg: 
 -- 	[26297]   = { default = true, duration = 180,  class = "GENERAL" },                                       --Berserking        // 26297 is Berserking Spell ID, duration is the cooldown duration.
 
-local classTable = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID", "GENERAL" };
+local classTable = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "DEATHKNIGHT", "SHAMAN", "MAGE", "WARLOCK", "DRUID", "GENERAL" };
 local specTable = {
 	{"ARMS", "FURY", "PROTECTION"},
 	{"HOLY", "PROTECTION", "RETRIBUTION"},
 	{"BEAST MASTERY", "MARKSMANSHIP", "SURVIVAL"},
 	{"ASSASSINATION", "COMBAT", "SUBTLETY"},
 	{"DISCIPLINE", "HOLY", "SHADOW"},
+	{"BLOOD", "FROST", "UNHOLY"},
 	{"ELEMENTAL", "ENHANCEMENT", "RESTORATION"},
 	{"ARCANE", "FIRE", "FROST"},
 	{"AFFLICTION", "DEMONOLOGY", "DESTRUCTION"},
@@ -85,7 +86,7 @@ local cooldowns = {
 	[12472]   = { default = true, duration = 180,  class = "MAGE" },                                          --Icy Veins
 	[12043]   = { default = true, duration = 180,  class = "MAGE" },                                          --Presence of Mind
 	[45438]   = { default = true, duration = 240,  class = "MAGE" },  									      --Ice Block
-	[27088]   = { default = false, duration = 25,  class = "MAGE" },  									      --Frost Nova
+	[27088]   = { default = false, duration = 21,  class = "MAGE" },  									      --Frost Nova
 	[33395]   = { default = false, duration = 25,  class = "MAGE" },  									      --Pet Nova (Freeze)
 	[42987]   = { default = false, duration = 120,  class = "MAGE" },  									      --Mana gem
 	[66]   = { default = false, duration = 300,  class = "MAGE" },  									  	  --Invisibility
@@ -152,7 +153,7 @@ local cooldowns = {
 
 	
 	--DRUID
-	[29166]   = { default = true, duration = 240,  class = "DRUID" },                                         --Innervate
+	[29166]   = { default = true, duration = 360,  class = "DRUID" },                                         --Innervate
 	[22812]   = { default = true, duration = 60,  class = "DRUID" },  										  --Barkskin
 	[16979]   = { default = false, duration = 15,  class = "DRUID" },                                         --Feral Charge - Bear
 	[17116]   = { default = true, duration = 180,  class = "DRUID" },                                         --Nature's Swiftness
@@ -231,6 +232,7 @@ local order = {
 	["HUNTER"] = 8,
 	["MAGE"] = 9,
 	["ROGUE"] = 10,
+	["DEATHKNIGHT"] = 11
 }
 
 local resets = {
